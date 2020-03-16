@@ -16,10 +16,10 @@ namespace BrainCompiler.TESTS
                 case JavaToken.SystemOut:
                     if (code.Contains("System.out.println")) //tok
                     {
-                        tmp = code.Split('.', '(', ')');
+                        tmp = Tokenizer(code);
                         foreach (string tok in tmp)
                         {
-                            Console.WriteLine(tok);
+                            Console.Write(tok + " ");
                         }
                     }
                     break;
@@ -27,6 +27,12 @@ namespace BrainCompiler.TESTS
                 default:
                     break;
             }
+        }
+
+        public static string[] Tokenizer(string code)
+        {
+            //create offical seperators
+            return code.Split('.', '(', ')');
         }
     }
 }

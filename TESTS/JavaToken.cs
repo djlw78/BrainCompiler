@@ -6,7 +6,11 @@ namespace BrainCompiler.TESTS
 {
     public enum JavaToken
     {
+        //Custom Tokens
         SystemOut,
+
+        //Literals
+        StringLiteral,
 
     }
 }
